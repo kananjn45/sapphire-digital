@@ -67,9 +67,9 @@ a {
     font-size: 25px;
     margin-top: 20px;
 }
-.H2:hover{
+/* .H2:hover{
     transform: scale(1.05);
-} 
+}  */
 .content p{
     font-size: 20px;
     text-align: justify;
