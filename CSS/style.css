@@ -1,123 +1,169 @@
-*{
+* {
     font-family: cursive, serif;
     box-sizing: border-box;
 }
-
-body{
-    background-color: rgb(246, 232, 215);
-    display: inline;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-
-#I1{
+body {
+    background-color: rgb(246, 232, 215);
+}
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+#I1 {
     border: 2px solid black;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    margin-top: 0;       /* Remove top margin */
+    margin-top: 0;
     margin-left: 10px;
+    flex-shrink: 0;
 }
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-#P1{
+#P1 {
     margin-left: 20px;
     font-size: 40px;
-    display: inline;
-    padding-right: 400px;
+    display: inline-block;
+    padding-right: 20px;
+    max-width: calc(100% - 80px);
+    overflow: hidden;
+    word-break: break-word;
 }
-
 .navbar {
     background-color: pink;
     padding: 10px;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
 }
-
 .box-1 {
-    display: flex; /* Corrected */
+    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* Optional, prevents wrapping */
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 5px;
+    width: 100%;
 }
-
 a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    padding: 10px; /* Reduced */
-    cursor: pointer; /* For better UX */
+    padding: 10px;
+    cursor: pointer;
 }
-
 .box-1 a:hover {
     background-color: palevioletred;
     color: black;
     border: 2px solid black;
-    padding: 10px; /*Slightly less than default padding to avoid size jump */
+    padding: 10px;
     border-radius: 20px;
-    transition: background-color 0.3s, padding 0.3s; /* Smooth hover transition */
+    transition: background-color 0.3s, padding 0.3s;
 }
-.H2{
+.H2 {
     text-align: center;
     font-size: 25px;
     margin-top: 20px;
+    width: 100%;
 }
-.content p{
+.content {
+    width: 100%;
+    overflow: hidden;
+}
+.content p {
     font-size: 20px;
     text-align: justify;
     margin: 20px;
     line-height: 1.6;
 }
-#I2{
+#I2 {
     display: block;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 300px;
+    float: right;
+    height: 250px;
+    max-width: 320px;
+    width: 100%;
+    margin-left: 16px;
+    margin-right: 0;
     border: 2px solid black;
     border-radius: 10px;
-    float: right;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: none;
+    transition: transform 0.3s, box-shadow 0.3s ease;
 }
-#I2:hover{
+#I2:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
-.container{
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 950px;
     width: 100%;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: visible;      /* SO NO SCROLLBAR ON HOVER */
 }
-.box{
-    display: flex; /* Corrected */
-    flex-direction: row;
-    flex-wrap: nowrap; /* Optional, prevents wrapping */
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 6vw;
+        max-width: 100%;
+    }
+    #I2 {
+        float: none;
+        margin: 0 auto 16px auto;
+        height: 180px;
+        max-width: 90vw;
+        width: 100%;
+    }
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
     border-radius: 5px;
+    background: #fff;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.box:hover{
+.testimonial-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+.box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+    position: relative;
+    will-change: transform;
 }
-.contact-info{
+.contact-info {
     display: flex;
     gap: 2rem;
-    justify-content: center; /*in case i want to align the icons differently change here*/
+    justify-content: center;
     align-items: center;
+    width: 100%;
 }
-.I3{
+.I3 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -126,60 +172,42 @@ a {
     box-shadow: 0 4px 20px rgba(25,118,210,0.15), 0 1.5px 8px rgba(0,0,0,0.10);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* media query for responsiveness */
-@media (max-width: 768px) {
-    body {
-        display: block;
-    }
-    #I1 {
-        height: 40px;
-        width: 40px;
-        margin-left: 5px;
+footer {
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .box {
+        padding: 10px;
     }
     #P1 {
         font-size: 30px;
-        padding-right: 100px;
+        padding-right: 10px;
         margin-left: 10px;
+        max-width: 98vw;
     }
     .navbar {
         padding: 5px;
     }
-    .box-1, .box {
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    a {
-        font-size: 18px;
-        padding: 8px;
+    .testimonial-img {
+        max-width: 100%;
+        height: auto;
     }
     .H2 {
         font-size: 20px;
         margin-top: 15px;
+        width: 100%;
     }
     .content p {
         font-size: 18px;
         margin: 10px;
     }
-    #I2 {
-        height: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-    }
-    .container {
-        grid-template-columns: 1fr;
-        padding: 0 0.5rem;
-    }
-    .contact-info {
-        gap: 1rem;
-    }
     .I3 {
         width: 50px;
         height: 50px;
         padding: 8px;
+    }
+    .contact-info {
+        gap: 1rem;
+        width: 100%;
     }
 }
