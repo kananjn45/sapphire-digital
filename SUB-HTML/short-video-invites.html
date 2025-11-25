@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sapphire Digital Cards - Short Video Invites</title>
-    <link rel="stylesheet" href="..\CSS\3-style.css">
-    <link rel="shortcut icon" href="..\assets\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/3-style.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <section class="top">
-        <img id="I1" src="..\assets\Sapphire.jpg" alt="Sapphire Logo">
-        <span id="P1">Sapphire Digital Cards</span>
-    </section>
-    <div class="Nav">
-        <nav class="navbar box-1">
-            <a href="..\index.HTML">Home</a>
-            <a href="..\SUB-HTML\static-invites.html">static-invites</a>
-            <a href="..\SUB-HTML\short-video-invites.html">short-video-invites</a>
-            <a href="..\SUB-HTML\long-video-invites.html">long-video-invites</a>
-        </nav>
-    </div>
-
-    <div class="content">
-        <h2 class="H2">Short Video Invites</h2>
-        <p>Short videos deliver quick, engaging bursts of visual storytelling that capture attention instantly. Perfect
-            for social media, promotions, or highlights, these concise clips get your message across effectively within
-            seconds. Whether showcasing product features, event teasers, or creative snippets, short videos offer a
-            dynamic way to connect with audiences who prefer fast, digestible content. Designed to be easily shareable
-            and memorable, short video pages invite visitors to experience impactful moments without requiring a major
-            time commitment.</p>
-    </div>
-    <div class="container">
-        <div class="box">
-            <p>Birthday Bash</p><br>
-            <video width="250" height=auto controls>
-                <source src="..\assets\invite-2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="box">
-            <p>Wedding Celebration</p><br><br>
-            <video width="250" height=auto controls>
-                <source src="..\assets\invite1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="box">
-            <p>Graduation Day</p><br><br>
-            <video width="250" height=auto controls>
-                <source src="..\assets\invite-3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+<section class="top">
+    <div class="nav-block">
+        <div class="nav-main-row">
+            <div class="navbar-branding">
+                <img id="LogoNav" src="../assets/Sapphire.jpg" alt="Sapphire Logo">
+                <span id="TitleNav">Sapphire Digital Cards</span>
+            </div>
+            <nav class="navbar navbar-expand-lg flex-grow-1">
+                <div class="container-fluid px-0">
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                        <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../SUB-HTML/static-invites.html">Static Invites</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Short Video Invites</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../SUB-HTML/long-video-invites.html">Long Video Invites</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2025 Sapphire Digital Cards. All rights reserved.</p>
-    </footer>
-
+</section>
+<div class="content">
+    <h2 class="H2">Short Video Invites</h2>
+    <p>
+        Short videos deliver quick, engaging bursts of visual storytelling that capture attention instantly. Perfect
+        for social media, promotions, or highlights, these concise clips get your message across effectively within
+        seconds. Whether showcasing product features, event teasers, or creative snippets, short videos offer a
+        dynamic way to connect with audiences who prefer fast, digestible content. Designed to be easily shareable
+        and memorable, short video pages invite visitors to experience impactful moments without requiring a major
+        time commitment.
+    </p>
+</div>
+<div class="container">
+    <div class="box">
+        <p>Birthday Bash</p>
+        <video width="250" height="auto" controls>
+            <source src="../assets/invite-2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="box">
+        <p>Wedding Celebration</p>
+        <video width="250" height="auto" controls>
+            <source src="../assets/invite1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="box">
+        <p>Graduation Day</p>
+        <video width="250" height="auto" controls>
+            <source src="../assets/invite-3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2025 Sapphire Digital Cards. All rights reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -3,42 +3,53 @@
 <head>
     <title>Sapphire</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
     <main>
         <section class="top">
-            <img id="I1" src="assets/Sapphire.jpg" alt="Sapphire Logo">
-            <span id="P1">Sapphire Digital Cards</span>
+            <div class="nav-block">
+                <!-- ALL header row content here: logo, title, toggler, nav links -->
+                <div class="nav-main-row">
+                    <div class="navbar-branding">
+                        <img id="LogoNav" src="assets/Sapphire.jpg" alt="Sapphire Logo">
+                        <span id="TitleNav">Sapphire Digital Cards</span>
+                    </div>
+                    <!-- For desktop/laptop: nav links always shown, aligned right
+                         For mobile: hamburger shown, nav collapses under row -->
+                    <nav class="navbar navbar-expand-lg flex-grow-1">
+                        <div class="container-fluid px-0">
+                            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                                <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="SUB-HTML/static-invites.html">static-invites</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="SUB-HTML/short-video-invites.html">short-video-invites</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="SUB-HTML/long-video-invites.html">long-video-invites</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </section>
-        <div class="Nav">
-            <nav class="navbar box-1">
-                <a href="#">home</a>
-                <a href="SUB-HTML/static-invites.html">static-invites</a>
-                <a href="SUB-HTML/short-video-invites.html">short-video-invites</a>
-                <a href="SUB-HTML/long-video-invites.html">long-video-invites</a>
-            </nav>
-        </div>
         <div class="content about-us">
-            <h2 class="H2">About us</h2>
+            <h2 class="H2 text-center">About us</h2>
             <img id="I2" src="assets/main.png" alt="Sapphire Cards">
             <p>
-                At Sapphire Digital Cards, we are passionate about blending creativity with technology to offer unique
-                digital invitation solutions. Founded with the vision to simplify event invitations, we provide a
-                diverse collection of beautifully crafted digital cards for every occasion — from casual gatherings to
-                grand celebrations.<br>
-                Our team combines design expertise and tech innovation to create interactive, customizable, and
-                memorable digital invites. We understand the importance of first impressions, and we strive to make each
-                digital card a seamless extension of your event’s personality.<br>
-                Whether you are looking for static designs or engaging video invites, Sapphire Digital Cards is your
-                one-stop destination for effortless and elegant digital invitations that leave a lasting impression.<br>
-                Join us as we redefine invitations for the digital age — making celebrations more vibrant, accessible,
-                and environmentally friendly.
+                At Sapphire Digital Cards, we are passionate about blending creativity with technology to offer unique digital invitation solutions. Founded with the vision to simplify event invitations, we provide a diverse collection of beautifully crafted digital cards for every occasion — from casual gatherings to grand celebrations.<br>
+                Our team combines design expertise and tech innovation to create interactive, customizable, and memorable digital invites. We understand the importance of first impressions, and we strive to make each digital card a seamless extension of your event’s personality.<br>
+                Whether you are looking for static designs or engaging video invites, Sapphire Digital Cards is your one-stop destination for effortless and elegant digital invitations that leave a lasting impression.<br>
+                Join us as we redefine invitations for the digital age — making celebrations more vibrant, accessible, and environmentally friendly.
             </p>
         </div>
         <div class="content">
-            <h2 class="H2">Testimonials</h2>
+            <h2 class="H2 text-center">Testimonials</h2>
             <div class="container">
                 <div class="box">
                     <img class="testimonial-img" src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/524b0ec6-387b-477d-8afc-b26d499d5e7d.png" alt="">
@@ -68,16 +79,15 @@
         </div>
     </main>
     <footer>
-        <h2 class="H2">Contact Us</h2>
+        <h2 class="H2 text-center">Contact Us</h2>
         <div class="contact-info">
             <a href="mailto:sapphire.digitalcards@gmail.com"><img class="I3" src="https://tse2.mm.bing.net/th/id/OIP.cuDSSWQJzedwe8oux-MaXwHaHa?pid=Api&P=0&h=180"></a>
             <a href="https://www.instagram.com/sapphire.digitalcards?utm_source=qr&igsh=N3E3b3l4dW84dWdh"><img class="I3" src="https://tse4.mm.bing.net/th/id/OIP.w0_mEumTY7H69CEIEdguaQHaHa?pid=Api&P=0&h=180"></a>
         </div>
-        <p>
-            <font size="5px">
-                &copy; 2025 Sapphire Digital Cards. All rights reserved.
-            </font>
+        <p style="text-align:center; font-size:1.25rem;">
+            &copy; 2025 Sapphire Digital Cards. All rights reserved.
         </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

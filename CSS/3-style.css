@@ -1,192 +1,198 @@
-*{
+* {
     font-family: cursive, serif;
     box-sizing: border-box;
 }
-
-body{
-    background-color: rgb(246, 232, 215);
-    display: inline;
+body, .about-us, .content, .container, footer {
+    background: rgb(246,232,215) !important;
+    margin: 0;
+    padding: 0;
 }
-
-#I1{
-    border: 2px solid black;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin-top: 0;       /* Remove top margin */
-    margin-left: 10px;
+.top {
+    background: rgb(246,232,215);
+    width: 100%;
+    margin-bottom: 0;
 }
-.top{
+.nav-block {
+    background: pink;
+    border-radius: 16px;
+    width: 100%;
+    margin: 16px 0 0 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 0;
+}
+.nav-main-row {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    width: 100%;
 }
-#P1{
-    margin-left: 20px;
-    font-size: 40px;
-    display: inline;
-    padding-right: 400px;
-}
-
-.navbar {
-    background-color: pink;
-    padding: 10px;
+.navbar-branding {
+    display: flex;
     align-items: center;
+    gap: 10px;
 }
-
-.box-1 {
-    display: flex; /* Corrected */
-    flex-direction: row;
-    flex-wrap: nowrap; /* Optional, prevents wrapping */
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 5px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    padding: 10px; /* Reduced */
-    cursor: pointer; /* For better UX */
-}
-
-.box-1 a:hover {
-    background-color: palevioletred;
-    color: black;
+#LogoNav {
     border: 2px solid black;
-    padding: 10px; /*Slightly less than default padding to avoid size jump */
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+#TitleNav {
+    font-size: 34px;
+    font-family: cursive, serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 8px;
+}
+.navbar {
+    background: transparent !important;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+}
+.navbar .navbar-nav {
+    flex-direction: row;
+}
+.navbar .nav-link {
+    color: black !important;
+    font-size: 20px;
     border-radius: 20px;
-    transition: background-color 0.3s, padding 0.3s; /* Smooth hover transition */
+    padding: 10px 20px;
 }
-.H2{
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background: palevioletred !important;
+    color: black !important;
+}
+.navbar-toggler {
+    border: none;
+    margin-left: 10px;
+    font-size: 1.5em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    display: none; /* desktop hides */
+}
+.H2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 20px;
+    width: 100%;
 }
-
-.content p{
+.content p {
     font-size: 20px;
     text-align: justify;
     margin: 20px;
     line-height: 1.6;
 }
-#I2{
-    display: block;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 300px;
-    border: 2px solid black;
-    border-radius: 10px;
-    float: right;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: none;
-}
-#I2:hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-.container{
+.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    max-width: 950px;
     width: 100%;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: visible;
 }
-.box{
-    display: flex; /* Corrected */
-    flex-direction: row;
-    flex-wrap: nowrap; /* Optional, prevents wrapping */
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 5px;
-}
-.box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-.contact-info{
+.box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     display: flex;
-    gap: 2rem;
-    justify-content: center; /*in case i want to align the icons differently change here*/
+    flex-direction: column;
     align-items: center;
-}
-.I3{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 4px 20px rgba(25,118,210,0.15), 0 1.5px 8px rgba(0,0,0,0.10);
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* media query responsiveness */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.14);
+    z-index: 1;
+    position: relative;
+    will-change: transform;
+}
+/* IMAGES in cards look great */
+.box img, .testimonial-img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 12px auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+video {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 16px 0;
+    margin-top: 24px;
+}
 @media (max-width: 1024px) {
     .container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        padding: 0 4vw;
+        max-width: 100%;
+        justify-items: center;
     }
 }
-
 @media (max-width: 768px) {
-    body {
-        display: block;
-    }
-    #I1 {
-        height: 40px;
-        width: 40px;
-        margin-left: 5px;
-    }
-    #P1 {
-        font-size: 28px;
-        padding-right: 50px;
-        margin-left: 10px;
-    }
-    .navbar {
-        padding: 5px;
-    }
-    .box-1, .box {
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    a {
-        font-size: 18px;
-        padding: 8px;
-    }
-    .H2 {
-        font-size: 22px;
-        margin-top: 15px;
-    }
-    .content p {
-        font-size: 18px;
-        margin: 10px;
-    }
-    #I2 {
-        height: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-    }
     .container {
         grid-template-columns: 1fr;
-        padding: 0 0.5rem;
+        padding: 0 6vw;
+        max-width: 100%;
+        justify-items: center;
     }
-    .contact-info {
-        gap: 1rem;
+    .box {
+        max-width: 330px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 10px;
     }
-    .I3 {
-        width: 50px;
-        height: 50px;
-        padding: 8px;
+    .nav-main-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 8px 8px;
+    }
+    .navbar-branding {
+        gap: 6px;
+    }
+    #LogoNav {
+        height: 30px;
+        width: 30px;
+    }
+    #TitleNav {
+        font-size: 17px;
+        margin-right: 4px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    .navbar-toggler {
+        display: block !important;
+        margin-left: 10px;
+        padding: 2px 8px;
+        font-size: 1.3em;
+    }
+    .navbar .navbar-nav {
+        flex-direction: column;
     }
 }
