@@ -1,5 +1,5 @@
 * {
-    font-family: cursive, serif;
+    font-family: serif, 'Times New Roman', Times;
     box-sizing: border-box;
 }
 body, .about-us, .content, .container, footer {
@@ -120,7 +120,6 @@ body, .about-us, .content, .container, footer {
     position: relative;
     will-change: transform;
 }
-/* IMAGES in cards look great */
 .box img, .testimonial-img {
     display: block;
     width: 100%;
